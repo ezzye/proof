@@ -1,0 +1,16 @@
+@startuml
+
+() "s3 change \ndocument" as s3
+
+component thor [
+**Thor**
+process s3 notification event;
+emit simple trigger message;
+]
+
+s3 -> thor
+
+
+
+
+@enduml
